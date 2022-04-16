@@ -22,7 +22,7 @@ import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
-      jx: 'https://library.wananbaobao.com/api/json.php?url='
+      jx: 'https://dplayer.wananbaobao.com/api2/json.php?url='
     }
   },
   mounted() {
