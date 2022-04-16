@@ -73,9 +73,7 @@ export default {
         console.log(this.iframe)
       }
     },
-    // iframePlayer() {
 
-    // },
     async getUrl(url) {
       const { data: res } = await axios.get(`${this.$store.state.jx}${url}`)
       const source = res.url
