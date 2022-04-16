@@ -4,7 +4,7 @@
     <div class="text-lg font-bold">JSON模式🚀</div>
     <div class="mt-1 mb-1">
       🥰 JSON解析接口：
-      <input v-model="jx" placeholder="https://json.pangujiexi.com:12345/json.php?url=" class="border-2 border-indigo-500 rounded" type="text" />
+      <input v-model="jx" :placeholder="$store.state.jx" class="border-2 border-indigo-500 rounded" type="text" />
     </div>
     <div class="mt-1 mb-1">
       🚽 影片搜索：
@@ -22,7 +22,7 @@ import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
-      jx: 'https://dplayer.wananbaobao.com/api2/json.php?url='
+      jx: ''
     }
   },
   mounted() {
@@ -31,6 +31,7 @@ export default {
   methods: {
     ...mapMutations(['upradio', 'upjx', 'upmsg']),
     iniStart() {
+      this.js = $store.state.jx
       this.upradio('2')
       this.upjx(this.jx)
       this.upmsg('JSON模式')
