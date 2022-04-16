@@ -36,5 +36,13 @@ npm run serve
 npm run build
 ```
 
+## 更新日志
+
+- V1.0.3
+- 修复 3 处细节错误
+- 修复接口不同步的问题
+
+## 引用
+
 前端资源加速由：[Good_Night - Accelerate](https://www.wananbaobao.com/) 提供
 播放器为[DPLayer](https://dplayer.js.org/zh/)

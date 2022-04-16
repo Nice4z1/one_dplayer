@@ -7,6 +7,7 @@ let initState = {
   msg: '默认模式',
   router: '/khome',
   jx: 'https://dplayer.wananbaobao.com/api2/json.php?url=',
+  iframe: 'https://jx.m3u8.pw/?url=',
   radio: '1',
   url: 'https://pan.lingshulian.com/s/t/3daec647028f6a44?'
 }
@@ -36,6 +37,11 @@ export default new Vuex.Store({
       state.msg = payload
       this.commit('saveStateToStorage')
     },
+    upiframe(state, payload) {
+      state.msg = payload
+      this.commit('saveStateToStorage')
+    },
+
     saveStateToStorage(state) {
       localStorage.setItem('state', JSON.stringify(state))
     }

@@ -4,7 +4,7 @@
     <div class="text-lg font-bold">iFrame模式🚀</div>
     <div class="mt-1 mb-1">
       🥰 iFrame通用接口：
-      <input v-model="jx" placeholder="https://json.pangujiexi.com:12345/json.php?url=" class="border-2 border-indigo-500 rounded" type="text" />
+      <input v-model="jx" :placeholder="$store.state.iframe" class="border-2 border-indigo-500 rounded" type="text" />
     </div>
     <div class="mt-1 mb-1">
       🚽 影片搜索：
@@ -22,17 +22,18 @@ import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
-      jx: 'https://jx.m3u8.pw/?url='
+      jx: ''
     }
   },
   created() {
     this.iniStart()
   },
   methods: {
-    ...mapMutations(['upradio', 'upjx', 'upmsg']),
+    ...mapMutations(['upradio', 'upmsg', 'upiframe']),
     iniStart() {
+      this.jx = this.$store.state.iframe
       this.upradio('3')
-      this.upjx(this.jx)
+      this.upiframe(this.jx)
       this.upmsg('iFrame模式')
       this.$notify({
         title: '成功切换iFrame模式',
@@ -41,7 +42,7 @@ export default {
     },
     SaveReturn() {
       this.upradio('3')
-      this.upjx(this.jx)
+      this.upiframe(this.jx)
       this.upmsg('iFrame模式')
       this.$router.push('/')
       this.$notify({

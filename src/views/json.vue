@@ -31,7 +31,7 @@ export default {
   methods: {
     ...mapMutations(['upradio', 'upjx', 'upmsg']),
     iniStart() {
-      this.js = $store.state.jx
+      this.jx = this.$store.state.jx
       this.upradio('2')
       this.upjx(this.jx)
       this.upmsg('JSON模式')
