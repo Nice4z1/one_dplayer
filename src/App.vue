@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-2xl">
+  <div class="mx-auto max-w-3xl">
     <Head></Head>
     <div class="bg-white p-3 shadow-md">
       <router-view></router-view>
