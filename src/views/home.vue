@@ -66,9 +66,8 @@ export default {
         }
         const url = this.url
         //得到解析
-        const jx = this.$store.state.jx
+        const jx = this.$store.state.iframe
         this.iframe = jx + url
-        console.log(this.iframe)
       }
     },
     async getUrl(url) {
