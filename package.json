@@ -1,16 +1,19 @@
 {
-  "name": "one_dplayer",
-  "version": "0.1.0",
+  "name": "One_DPLayer",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "report": "vue-cli-service build --report"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "core-js": "^3.8.3",
+    "element-ui": "^2.15.8",
     "register-service-worker": "^1.7.2",
     "vue": "^2.6.14",
-    "vue-router": "^3.5.1",
+    "vue-router": "^3.5.3",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
@@ -19,8 +22,13 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^10.4.4",
+    "babel-plugin-component": "^1.1.1",
+    "compression-webpack-plugin": "^6.1.1",
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24",
     "vue-template-compiler": "^2.6.14"
   }
 }
