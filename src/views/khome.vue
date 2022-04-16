@@ -25,7 +25,7 @@ export default {
       router: '',
       tips: {
         title: '扩展',
-        content: '<p>👋当前版本：1.0.0 😄</p><p>💽当前设置数据会在保存后存在你的浏览器中</p><p>🎉<span class="text-pink-400 font-bold">扩展支持：</span> 已开放2种模式</p> <p class="text-pink-400 font-bold">*如果解析接口跳广告请立即更换接口！ </p>'
+        content: '<p>👋当前版本：1.0.1 😄</p><p>💽当前设置数据会在保存后存在你的浏览器中</p><p>🎉<span class="text-pink-400 font-bold">扩展支持：</span> 已开放2种模式</p> <p class="text-pink-400 font-bold">*如果解析接口跳广告请立即更换接口！ </p>'
       }
     }
   },
