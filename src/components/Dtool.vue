@@ -27,7 +27,6 @@ export default {
   },
 
   created() {
-    console.log('About created', this.$data, this.$el)
     this.router()
   },
 

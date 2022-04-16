@@ -13,10 +13,7 @@ import Head from '@/components/Head'
 import Footer from '@/components/Footer'
 
 export default {
-  components: { Head, Footer },
-  created() {
-    console.log(ELEMENT)
-  }
+  components: { Head, Footer }
 }
 </script>
 

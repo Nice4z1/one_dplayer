@@ -2,10 +2,10 @@
   <div>
     <div class="mt-2 mb-2">
       <Tips :title="tips.title" :content="tips.content"></Tips>
-      <!-- //播放器 -->
+      <!-- 播放器 -->
       <div v-if="$store.state.radio == 2 || $store.state.radio == 1" class="rounded-md shadow-lg h-52 sm:h-72 lg:h-80" id="dp"></div>
       <iframe v-if="$store.state.radio == 3" class="rounded-md shadow-lg h-52 sm:h-72 lg:h-80 w-full" :src="iframe"></iframe>
-      <!-- //播放器 -->
+      <!-- 播放器 -->
     </div>
     <div class="mt-4 p-1">
       <el-alert v-if="$store.state.radio == 2" title="*您已开启JSON模式，可输入分享链接解析" type="info" show-icon></el-alert>
@@ -37,7 +37,6 @@ export default {
   },
   created() {
     this.uprouters()
-    console.log(this.$store.state.radio)
   },
   mounted() {
     this.star()
@@ -67,17 +66,14 @@ export default {
         }
         const url = this.url
         //得到解析
-        console.log(url)
         const jx = this.$store.state.jx
         this.iframe = jx + url
         console.log(this.iframe)
       }
     },
-
     async getUrl(url) {
       const { data: res } = await axios.get(`${this.$store.state.jx}${url}`)
       const source = res.url
-      // console.log(source)
       this.dplayer(source)
     },
     dplayer(url) {
