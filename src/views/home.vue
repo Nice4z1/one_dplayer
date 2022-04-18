@@ -54,7 +54,9 @@ export default {
         //如果没有
         this.dplayer(url)
       } else if (radio == '2') {
-        this.url = 'https://www.iqiyi.com/v_1ppw3j3bmvc.html?vfrm=pcw_home&vfrmblk=B&vfrmrst=fcs_0_v11'
+        if (this.url == '') {
+          this.url = 'https://www.iqiyi.com/v_1ppw3j3bmvc.html?vfrm=pcw_home&vfrmblk=B&vfrmrst=fcs_0_v11'
+        }
         const url = this.url
         this.getUrl(url)
         // 如果有那就axios拿链接
