@@ -50,8 +50,7 @@ export default {
     star() {
       const radio = this.$store.state.radio
       if (radio == '1') {
-        const url = this.$store.state.url
-        this.url = url
+        const url = this.url
         //如果没有
         this.dplayer(url)
       } else if (radio == '2') {
